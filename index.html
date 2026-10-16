@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="个人工具站，收录各种实用小工具">
+  <title>我的工具箱</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">~/工具箱</a>
+      <nav class="nav">
+        <a href="#tools">工具</a>
+        <a href="#about">关于</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏介绍 -->
+    <section class="hero container">
+      <p class="hero-hello">$ whoami</p>
+      <h1>你好，我是 <span class="accent">开发者</span></h1>
+      <p class="hero-desc">
+        这里是我的个人工具站。我会把平时写的一些实用小工具放在这里，
+        方便自己使用，也分享给你。
+      </p>
+    </section>
+
+    <!-- 工具列表（由 js/main.js 数据驱动渲染） -->
+    <section id="tools" class="container section">
+      <h2 class="section-title">// 小工具</h2>
+      <div id="tool-grid" class="tool-grid">
+        <!-- 工具卡片由 JS 渲染 -->
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about" class="container section">
+      <h2 class="section-title">// 关于本站</h2>
+      <div class="about-card">
+        <p>
+          本站采用纯静态方式搭建（HTML + CSS + JavaScript），无任何框架依赖。
+          每个小工具都是独立页面，位于 <code>tools/</code> 目录下，
+          新增工具时只需在 <code>js/main.js</code> 的工具列表中添加一条记录。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 我的工具箱 · 用好奇心驱动</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
